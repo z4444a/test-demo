@@ -1,0 +1,18 @@
+package com.github.pakhomovalexandr;
+
+public class NameParser {
+
+    public String parse(String input) {
+        if (input == null) {
+            return null;
+        }
+
+        String[] array = input.trim().split("\\s+");
+
+        if (array.length < 2) {
+            return "";
+        }
+
+        return array[1];
+    }
+}
