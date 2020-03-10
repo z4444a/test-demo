@@ -7,7 +7,7 @@ public class NameParser {
             return null;
         }
 
-        String[] array = input.trim().split("\\s+");
+        String[] array = input.trim().split("\\W+");
 
         if (array.length < 2) {
             return "";

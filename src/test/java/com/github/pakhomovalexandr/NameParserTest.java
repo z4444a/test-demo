@@ -49,4 +49,13 @@ class NameParserTest {
         String result = parser.parse(null);
         assertThat(result).isNull();
     }
+
+    @Test
+    void shouldReturnSecondNameWithoutPunctuationMark() {
+        NameParser parser = new NameParser();
+        String firstAndSecondName = "Vasya Pypkin.";
+
+        String result = parser.parse(firstAndSecondName);
+        assertThat(result).isEqualTo("Pypkin");
+    }
 }
